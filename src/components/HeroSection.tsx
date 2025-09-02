@@ -73,8 +73,8 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Side - Hero Visual */}
-          <div className="hidden lg:flex justify-center items-center">
-            <div className="relative">
+          <div className="hidden lg:flex justify-center items-start">
+            <div className="relative -mt-16">
               <img 
                 src="/lovable-uploads/4810cb6a-432e-4dc2-a354-98ce43453416.png" 
                 alt="Modern HVAC Equipment - AI-Powered Diagnostics" 
