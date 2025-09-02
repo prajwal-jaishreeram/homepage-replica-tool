@@ -48,6 +48,9 @@
     /* Hero gradient background - light theme */
     --hero-bg: 0 0% 100%;
     --hero-accent: 220 100% 95%;
+    
+    /* Header background */
+    --header-bg: 0 0% 74%;
 
     --radius: 0.5rem;
 
@@ -104,6 +107,9 @@
     /* Hero gradient background - dark theme */
     --hero-bg: 0 0% 3.9%;
     --hero-accent: 220 100% 8%;
+    
+    /* Header background */
+    --header-bg: 0 0% 3.9%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
