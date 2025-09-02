@@ -144,10 +144,11 @@ export const HeroSection = () => {
           {/* Right Side - Hero Visual */}
           <div className="hidden lg:flex justify-center items-start">
             <div className="relative -mt-32">
+              <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl scale-110"></div>
               <img 
                 src="/lovable-uploads/4810cb6a-432e-4dc2-a354-98ce43453416.png" 
                 alt="Modern HVAC Equipment - AI-Powered Diagnostics" 
-                className="w-full max-w-lg h-auto object-contain"
+                className="w-full max-w-xl h-auto object-contain relative z-10"
               />
             </div>
           </div>
