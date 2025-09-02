@@ -1,6 +1,47 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Car, Smartphone, CheckCircle } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Car, Smartphone, CheckCircle, LucideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
+
+interface FeatureCardProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const FeatureCard = ({ children, className }: FeatureCardProps) => (
+  <Card className={cn('group relative rounded-none shadow-zinc-950/5', className)}>
+    <CardDecorator />
+    {children}
+  </Card>
+);
+
+const CardDecorator = () => (
+  <>
+    <span className="border-primary absolute -left-px -top-px block size-2 border-l-2 border-t-2"></span>
+    <span className="border-primary absolute -right-px -top-px block size-2 border-r-2 border-t-2"></span>
+    <span className="border-primary absolute -bottom-px -left-px block size-2 border-b-2 border-l-2"></span>
+    <span className="border-primary absolute -bottom-px -right-px block size-2 border-b-2 border-r-2"></span>
+  </>
+);
+
+interface CardHeadingProps {
+  icon: LucideIcon;
+  number: string;
+  title: string;
+  description: string;
+}
+
+const CardHeading = ({ icon: Icon, number, title, description }: CardHeadingProps) => (
+  <div className="p-6">
+    <span className="text-muted-foreground flex items-center gap-2">
+      <Icon className="size-4" />
+      Step {number}
+    </span>
+    <h3 className="mt-4 text-2xl font-semibold">{title}</h3>
+    <p className="mt-4 text-muted-foreground leading-relaxed">{description}</p>
+  </div>
+);
 
 export const HowItWorksSection = () => {
   const steps = [
@@ -25,8 +66,8 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-hero-accent">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="how-it-works" className="bg-muted/50 py-16 md:py-32">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
             How It Works
@@ -36,29 +77,45 @@ export const HowItWorksSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="mx-auto grid gap-4 lg:grid-cols-3">
           {steps.map((step, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                {React.createElement(step.icon, { className: "w-16 h-16 mx-auto mb-6 text-tech-blue" })}
-                <div className="text-sm font-bold text-tech-blue mb-2">{step.number}</div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-              </CardContent>
-            </Card>
+            <FeatureCard key={index}>
+              <CardHeader className="pb-3">
+                <CardHeading
+                  icon={step.icon}
+                  number={step.number}
+                  title={step.title}
+                  description={step.description}
+                />
+              </CardHeader>
+            </FeatureCard>
           ))}
         </div>
 
-        {/* Arrow connectors for desktop */}
-        <div className="hidden md:flex justify-center items-center mt-8 space-x-32">
-          <svg className="w-12 h-6 text-tech-blue" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
-          </svg>
-          <svg className="w-12 h-6 text-tech-blue" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
-          </svg>
-        </div>
+        {/* Workflow visualization */}
+        <FeatureCard className="p-6 lg:col-span-1 mt-8">
+          <p className="mx-auto my-6 max-w-md text-balance text-center text-2xl font-semibold">
+            Seamless AI integration that enhances your existing workflow
+          </p>
+
+          <div className="flex justify-center gap-6 overflow-hidden">
+            <WorkflowStep label="Analyze" />
+            <WorkflowStep label="Diagnose" />
+            <WorkflowStep label="Complete" />
+          </div>
+        </FeatureCard>
       </div>
     </section>
   );
 };
+
+const WorkflowStep = ({ label }: { label: string }) => (
+  <div>
+    <div className="bg-gradient-to-b from-border size-fit rounded-2xl to-transparent p-px">
+      <div className="bg-gradient-to-b from-background to-muted/25 relative flex aspect-square w-fit items-center justify-center rounded-[15px] p-4">
+        <div className="size-7 rounded-full border border-primary bg-background sm:size-8"></div>
+      </div>
+    </div>
+    <span className="text-muted-foreground mt-1.5 block text-center text-sm">{label}</span>
+  </div>
+);
