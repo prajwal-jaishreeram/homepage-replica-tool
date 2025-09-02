@@ -88,10 +88,12 @@ export const HeroSection = () => {
             </div>
 
             {/* Headlines */}
-            <div className="space-y-3 lg:space-y-6">
+            <div className="space-y-2 lg:space-y-6">
               <h1 className="text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                <span className="lg:inline">AI for <span className="text-tech-blue">HVAC</span></span>
-                <span className="block lg:hidden">AI for <span className="text-tech-blue">HVAC</span></span>
+                <span className="lg:block">AI for</span>
+                <span className="lg:hidden">AI for <span className="text-tech-blue">HVAC</span></span>
+                <br className="lg:hidden" />
+                <span className="text-tech-blue lg:block hidden">HVAC</span>
                 <br />
                 Diagnostics
               </h1>
