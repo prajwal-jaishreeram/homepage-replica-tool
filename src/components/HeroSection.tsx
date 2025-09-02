@@ -3,8 +3,9 @@ import { Badge } from "@/components/ui/badge";
 
 export const HeroSection = () => {
   return (
-    <section className="bg-hero-bg min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+    <section className="bg-background min-h-screen flex items-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20"></div>
+      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
