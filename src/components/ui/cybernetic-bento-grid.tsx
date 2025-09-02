@@ -34,10 +34,11 @@ const BentoItem = ({ className, children }: BentoItemProps) => {
         <div 
             ref={itemRef} 
             className={cn(
-                "relative overflow-hidden rounded-lg bg-card border border-border p-6 transition-all duration-300",
+                "relative overflow-hidden rounded-lg bg-card border border-border transition-all duration-300",
                 "before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/10 before:to-transparent before:opacity-0",
                 "hover:before:opacity-100 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50",
                 "before:transition-opacity before:duration-300",
+                className?.includes('py-4') ? 'p-4' : 'p-6',
                 className
             )}
         >
@@ -79,19 +80,19 @@ export const CyberneticBentoGrid = () => {
 
                     {/* Metrics in same row - each spans 1 column */}
                     {/* HVAC Manuals Processed */}
-                    <BentoItem className="text-center">
+                    <BentoItem className="text-center py-4">
                         <div className="text-3xl font-bold text-foreground mb-2">15M+</div>
                         <p className="text-muted-foreground text-sm">HVAC Manuals Processed</p>
                     </BentoItem>
 
                     {/* Faster Diagnostics */}
-                    <BentoItem className="text-center">
+                    <BentoItem className="text-center py-4">
                         <div className="text-3xl font-bold text-primary mb-2">10x</div>
                         <p className="text-muted-foreground text-sm">Faster Diagnostics</p>
                     </BentoItem>
 
                     {/* Revenue Increase */}
-                    <BentoItem className="text-center">
+                    <BentoItem className="text-center py-4">
                         <div className="text-3xl font-bold text-primary mb-2">5-10%</div>
                         <p className="text-muted-foreground text-sm">Revenue Increase</p>
                     </BentoItem>
