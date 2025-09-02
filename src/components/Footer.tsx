@@ -13,12 +13,13 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
 		>
 			<div className="relative mx-auto max-w-7xl px-6 py-12">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-					{/* NOSO LABS Brand */}
 					<div className="md:col-span-2">
 						<div className="flex items-center space-x-3 mb-6">
-							<div className="w-8 h-8 bg-yc-orange rounded-sm flex items-center justify-center">
-								<span className="text-white font-bold text-sm">N</span>
-							</div>
+							<img 
+								src="/lovable-uploads/8437d24e-c6d4-40ce-9e2b-9b39b225e490.png" 
+								alt="NOSO LABS Logo" 
+								className="w-8 h-8"
+							/>
 							<span className="text-xl font-bold text-foreground">NOSO LABS</span>
 						</div>
 						<p className="text-muted-foreground text-sm max-w-md leading-relaxed">

@@ -7,9 +7,11 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center">
-              <span className="text-background font-bold text-xl">N</span>
-            </div>
+            <img 
+              src="/lovable-uploads/8437d24e-c6d4-40ce-9e2b-9b39b225e490.png" 
+              alt="NOSO LABS Logo" 
+              className="w-8 h-8"
+            />
             <span className="text-2xl font-bold text-foreground">NOSO LABS</span>
           </div>
 
@@ -26,10 +28,9 @@ export const Header = () => {
             </a>
           </nav>
 
-          {/* CTAs */}
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="hidden sm:inline-flex border-foreground text-foreground hover:bg-foreground hover:text-background">
-              Book a Call
+            <Button variant="outline" className="hidden sm:inline-flex border-foreground text-foreground hover:bg-foreground hover:text-background" asChild>
+              <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
             </Button>
             <Button className="bg-foreground text-background hover:bg-foreground/90">
               Download App
