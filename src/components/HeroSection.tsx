@@ -148,7 +148,7 @@ export const HeroSection = () => {
               <img 
                 src="/lovable-uploads/4810cb6a-432e-4dc2-a354-98ce43453416.png" 
                 alt="Modern HVAC Equipment - AI-Powered Diagnostics" 
-                className="w-full max-w-xl h-auto object-contain relative z-10"
+                className="w-full max-w-2xl h-auto object-contain relative z-10"
               />
             </div>
           </div>
