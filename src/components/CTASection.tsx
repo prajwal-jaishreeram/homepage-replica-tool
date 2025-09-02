@@ -28,42 +28,46 @@ const CardDecorator = () => (
 export const CTASection = () => {
   return (
     <section className="bg-muted/50 py-16 md:py-32">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-5xl">
-        <FeatureCard className="p-6">
-          <CardContent className="p-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 text-center">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-5xl">
+        <FeatureCard className="p-3 sm:p-6">
+          <CardContent className="p-6 sm:p-8 md:p-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 sm:mb-6 text-center leading-tight">
               Ready to 10x Your 
-              <br />
+              <br className="hidden sm:block" />
+              <span className="block sm:inline"> </span>
               <span className="text-primary">HVAC Diagnostics?</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed text-center px-2">
               Join hundreds of HVAC professionals already using AI to increase revenue, 
               reduce callbacks, and deliver better service.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button className="text-lg px-8 py-6 h-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8 px-2">
+              <Button className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto">
                 Download App Now
               </Button>
               <Button 
                 variant="outline" 
-                className="text-lg px-8 py-6 h-auto"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto"
+                asChild
               >
-                Schedule Demo Call
+                <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">
+                  Schedule Demo Call
+                </a>
               </Button>
             </div>
 
-            <div className="flex justify-center items-center space-x-8 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-xs sm:text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                 <span>5-minute setup</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                 <span>No setup costs</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                 <span>Immediate ROI</span>
               </div>
             </div>

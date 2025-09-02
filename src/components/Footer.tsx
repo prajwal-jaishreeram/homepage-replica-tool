@@ -13,6 +13,7 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
 		>
 			<div className="relative mx-auto max-w-7xl px-6 py-12">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+					{/* NOSO LABS Brand */}
 					<div className="md:col-span-2">
 						<div className="flex items-center space-x-3 mb-6">
 							<img 
@@ -36,67 +37,70 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
 						</div>
 					</div>
 
-					{/* Links */}
-					<div>
-						<h3 className="text-foreground/75 mb-4 text-xs font-medium tracking-wider uppercase">
-							Legal
-						</h3>
-						<ul className="space-y-3">
-							<li>
-								<a
-									href="/privacy"
-									className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-								>
-									Privacy Policy
-								</a>
-							</li>
-							<li>
-								<a
-									href="/terms"
-									className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-								>
-									Terms of Service
-								</a>
-							</li>
-						</ul>
-					</div>
+					{/* Legal and Connect in same row on mobile */}
+					<div className="md:col-span-2 grid grid-cols-2 gap-8">
+						{/* Legal */}
+						<div>
+							<h3 className="text-foreground/75 mb-4 text-xs font-medium tracking-wider uppercase">
+								Legal
+							</h3>
+							<ul className="space-y-3">
+								<li>
+									<a
+										href="/privacy"
+										className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+									>
+										Privacy Policy
+									</a>
+								</li>
+								<li>
+									<a
+										href="/terms"
+										className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+									>
+										Terms of Service
+									</a>
+								</li>
+							</ul>
+						</div>
 
-					{/* Contact & Social */}
-					<div>
-						<h3 className="text-foreground/75 mb-4 text-xs font-medium tracking-wider uppercase">
-							Connect
-						</h3>
-						<ul className="space-y-3">
-							<li>
-								<a
-									href="/contact"
-									className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-								>
-									Contact
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://linkedin.com/company/noso-labs"
-									className="text-muted-foreground hover:text-foreground text-sm transition-colors flex items-center space-x-2"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<Linkedin className="w-4 h-4" />
-									<span>LinkedIn</span>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://ycombinator.com"
-									className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Y Combinator
-								</a>
-							</li>
-						</ul>
+						{/* Connect */}
+						<div>
+							<h3 className="text-foreground/75 mb-4 text-xs font-medium tracking-wider uppercase">
+								Connect
+							</h3>
+							<ul className="space-y-3">
+								<li>
+									<a
+										href="/contact"
+										className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+									>
+										Contact
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://linkedin.com/company/noso-labs"
+										className="text-muted-foreground hover:text-foreground text-sm transition-colors flex items-center space-x-2"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<Linkedin className="w-4 h-4" />
+										<span>LinkedIn</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://ycombinator.com"
+										className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Y Combinator
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

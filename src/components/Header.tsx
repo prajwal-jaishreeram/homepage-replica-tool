@@ -1,6 +1,17 @@
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = [
+    { href: "#features", label: "Features" },
+    { href: "#how-it-works", label: "How It Works" },
+    { href: "#about", label: "About" },
+  ];
+
   return (
     <header className="w-full bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
@@ -15,27 +26,60 @@ export const Header = () => {
             <span className="text-2xl font-bold text-foreground">NOSO LABS</span>
           </div>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-foreground hover:text-muted-foreground transition-colors font-medium">
-              Features
-            </a>
-            <a href="#how-it-works" className="text-foreground hover:text-muted-foreground transition-colors font-medium">
-              How It Works
-            </a>
-            <a href="#about" className="text-foreground hover:text-muted-foreground transition-colors font-medium">
-              About
-            </a>
+            {navItems.map((item) => (
+              <a 
+                key={item.href}
+                href={item.href} 
+                className="text-foreground hover:text-muted-foreground transition-colors font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
-          <div className="flex items-center space-x-4">
-            <Button variant="outline" className="hidden sm:inline-flex border-foreground text-foreground hover:bg-foreground hover:text-background" asChild>
+          {/* Desktop CTAs */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background" asChild>
               <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
             </Button>
             <Button className="bg-foreground text-background hover:bg-foreground/90">
               Download App
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-4 mt-6">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-foreground hover:text-muted-foreground transition-colors font-medium text-lg py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <div className="flex flex-col space-y-3 pt-6 border-t">
+                  <Button variant="outline" className="w-full border-foreground text-foreground hover:bg-foreground hover:text-background" asChild>
+                    <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
+                  </Button>
+                  <Button className="w-full bg-foreground text-background hover:bg-foreground/90">
+                    Download App
+                  </Button>
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
