@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer({ className, ...props }: React.ComponentProps<'footer'>) {
 	return (
@@ -46,20 +47,20 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
 							</h3>
 							<ul className="space-y-3">
 								<li>
-									<a
-										href="/privacy"
+									<Link
+										to="/privacy"
 										className="text-muted-foreground hover:text-foreground text-sm transition-colors"
 									>
 										Privacy Policy
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href="/terms"
+									<Link
+										to="/terms"
 										className="text-muted-foreground hover:text-foreground text-sm transition-colors"
 									>
 										Terms of Service
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
