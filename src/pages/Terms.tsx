@@ -10,7 +10,7 @@ const Terms = () => {
           <h1 className="text-4xl font-bold text-foreground mb-8">Terms and Conditions</h1>
           <p className="text-muted-foreground mb-8">Effective Date: 06/05/2025</p>
 
-          <div className="bg-muted/50 border border-border rounded-lg p-6 mb-8">
+          <div className="bg-muted/50 border border-foreground rounded-lg p-6 mb-8">
             <p className="text-foreground font-medium leading-relaxed">
               <strong>PLEASE READ THE TERMS AND CONDITIONS CAREFULLY. THE TERMS AND CONDITIONS ("AGREEMENT") CONSTITUTE A LEGAL AGREEMENT BETWEEN YOU AND NOSO.</strong>
             </p>
@@ -70,7 +70,7 @@ const Terms = () => {
             </p>
           </section>
 
-          <div className="bg-muted/50 border border-border rounded-lg p-6 mt-8">
+          <div className="bg-muted/50 border border-foreground rounded-lg p-6 mt-8">
             <p className="text-sm text-muted-foreground text-center">
               These terms and conditions are effective as of the date specified above and may be updated from time to time. Please review them regularly to stay informed of any changes.
             </p>
