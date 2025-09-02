@@ -1,64 +1,38 @@
 import React from "react";
 import { BentoGrid, type BentoItem } from "@/components/ui/bento-grid";
-import { Zap, DollarSign, Wrench, Clipboard, FileText, Smartphone, Users, Clock } from "lucide-react";
+import { Users, FileText, Clipboard } from "lucide-react";
 
 export const FeaturesSection = () => {
   const features: BentoItem[] = [
     {
-      title: "Real-time Diagnostics",
-      meta: "15M+ manuals",
-      description: "Instant analysis from equipment photos using 15M+ HVAC manuals",
-      icon: <Zap className="w-4 h-4 text-tech-blue" />,
-      status: "AI-Powered",
-      tags: ["Instant", "AI", "Photos"],
+      title: "Know Your Customer",
+      meta: "ERP-Powered Customer Intelligence",
+      description: "NOSO analyzes your internal data and ERP systems to automatically brief technicians before each service call. Get instant access to customer history, preferences, past issues, and service patterns to deliver personalized service and identify the right upsell opportunities.",
+      icon: <Users className="w-4 h-4 text-tech-blue" />,
+      status: "Intelligence",
+      tags: ["Customer", "ERP", "History"],
       colSpan: 2,
-      hasPersistentHover: true,
-      cta: "Try Now →"
-    },
-    {
-      title: "Cross-trade Revenue",
-      meta: "5-10% boost",
-      description: "Identify electrical, plumbing, and other revenue opportunities automatically",
-      icon: <DollarSign className="w-4 h-4 text-success-green" />,
-      status: "Revenue+",
-      tags: ["Revenue", "Cross-trade"],
       cta: "Learn More →"
     },
     {
-      title: "ServiceTitan Integration", 
-      meta: "seamless",
-      description: "Seamless workflow integration with your existing service management platform",
-      icon: <Wrench className="w-4 h-4 text-orange-500" />,
-      status: "Integration",
-      tags: ["ServiceTitan", "Workflow"],
+      title: "Know Every HVAC Unit",
+      meta: "15M+ Manuals at Your Fingertips",
+      description: "Our AI is trained on over 15 million equipment manuals and technical documents. Whether it's a 20-year-old unit or the latest model, NOSO provides instant access to specifications, troubleshooting guides, and repair procedures for any HVAC system your techs encounter.",
+      icon: <FileText className="w-4 h-4 text-success-green" />,
+      status: "Knowledge Base",
+      tags: ["Manuals", "AI", "Equipment"],
       colSpan: 2,
-      cta: "Connect →"
+      cta: "Explore →"
     },
     {
-      title: "Step-by-Step Guidance",
-      meta: "expert level",
-      description: "AI provides detailed repair instructions and parts recommendations",
+      title: "Know Your Workflow", 
+      meta: "Smart Summaries & Sales Intelligence",
+      description: "NOSO automatically generates professional job summaries and intelligently highlights sales opportunities during your proposal process. Transform voice notes into polished reports while identifying additional services and follow-up opportunities that maximize revenue per call.",
       icon: <Clipboard className="w-4 h-4 text-purple-500" />,
-      status: "Guidance",
-      tags: ["Instructions", "Parts"],
-      cta: "Guide Me →"
-    },
-    {
-      title: "Smart Documentation",
-      meta: "automated",
-      description: "Automated service call summaries and recommendations for follow-up work",
-      icon: <FileText className="w-4 h-4 text-blue-500" />,
-      status: "Auto",
-      tags: ["Documentation", "Follow-up"]
-    },
-    {
-      title: "Mobile First",
-      meta: "5-min setup",
-      description: "5-minute deployment with no hardware or infrastructure requirements",
-      icon: <Smartphone className="w-4 h-4 text-green-500" />,
-      status: "Ready",
-      tags: ["Mobile", "Quick"],
-      colSpan: 2
+      status: "Automation",
+      tags: ["Voice-to-Doc", "Sales", "Reports"],
+      colSpan: 2,
+      cta: "Try Now →"
     }
   ];
 
@@ -78,7 +52,7 @@ export const FeaturesSection = () => {
 
         <div className="text-center mt-16">
           <div className="inline-flex items-center space-x-2 bg-button-secondary-bg px-6 py-3 rounded-full border border-foreground dark:border-border">
-            <span className="text-sm font-medium text-foreground">Reduce Callbacks & Repeat Visits</span>
+            <span className="text-sm font-medium text-foreground">Voice-to-documentation: Record your observations and let NOSO handle all the paperwork, ensuring nothing falls through the cracks.</span>
             <div className="w-2 h-2 bg-success-green rounded-full"></div>
           </div>
         </div>
