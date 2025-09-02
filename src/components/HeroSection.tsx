@@ -90,7 +90,10 @@ export const HeroSection = () => {
             {/* Headlines */}
             <div className="space-y-2 lg:space-y-6">
               <h1 className="text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                AI for <span className="text-tech-blue">HVAC</span>
+                <span className="lg:block">AI for</span>
+                <span className="lg:hidden">AI for <span className="text-tech-blue">HVAC</span></span>
+                <br className="lg:hidden" />
+                <span className="text-tech-blue lg:block hidden">HVAC</span>
                 <br />
                 Diagnostics
               </h1>
@@ -100,7 +103,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Key Stats */}
-            <div className="flex flex-wrap gap-6 text-sm">
+            <div className="hidden lg:flex flex-wrap gap-6 text-sm">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-success-green rounded-full"></div>
                 <span className="text-foreground font-medium">5-10% Revenue Increase</span>
