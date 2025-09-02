@@ -126,8 +126,11 @@ export const HeroSection = () => {
               <Button 
                 variant="outline" 
                 className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto"
+                asChild
               >
-                Book a Call
+                <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">
+                  Book a Call
+                </a>
               </Button>
             </div>
 
