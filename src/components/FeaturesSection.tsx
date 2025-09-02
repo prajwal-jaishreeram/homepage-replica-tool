@@ -1,42 +1,43 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Zap, DollarSign, Wrench, Clipboard, FileText, Rocket } from "lucide-react";
 
 export const FeaturesSection = () => {
   const features = [
     {
       title: "Real-time Diagnostics",
       description: "Instant analysis from equipment photos using 15M+ HVAC manuals",
-      icon: "⚡",
+      icon: Zap,
       badge: "AI-Powered"
     },
     {
       title: "Cross-trade Opportunities", 
       description: "Identify electrical, plumbing, and other revenue opportunities automatically",
-      icon: "💰",
+      icon: DollarSign,
       badge: "Revenue+"
     },
     {
       title: "ServiceTitan Integration",
       description: "Seamless workflow integration with your existing service management platform",
-      icon: "🔧",
+      icon: Wrench,
       badge: "Integration"
     },
     {
       title: "Step-by-Step Guidance",
       description: "AI provides detailed repair instructions and parts recommendations",
-      icon: "📋",
+      icon: Clipboard,
       badge: "Guidance"
     },
     {
       title: "Service Call Summaries",
       description: "Automated documentation and recommendations for follow-up work",
-      icon: "📝", 
+      icon: FileText, 
       badge: "Documentation"
     },
     {
       title: "Zero Setup Cost",
       description: "5-minute deployment with no hardware or infrastructure requirements",
-      icon: "🚀",
+      icon: Rocket,
       badge: "Easy Setup"
     }
   ];
@@ -59,7 +60,7 @@ export const FeaturesSection = () => {
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl">{feature.icon}</div>
+                  <feature.icon className="w-10 h-10 text-tech-blue" />
                   <Badge variant="secondary" className="text-xs">
                     {feature.badge}
                   </Badge>

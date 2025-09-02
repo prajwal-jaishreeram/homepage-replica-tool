@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Car, Smartphone, CheckCircle } from "lucide-react";
 
 export const HowItWorksSection = () => {
   const steps = [
@@ -6,19 +7,19 @@ export const HowItWorksSection = () => {
       number: "01",
       title: "On the Way",
       description: "AI Job Brief analyzes service history and prepares diagnostics during your drive time",
-      icon: "🚗"
+      icon: Car
     },
     {
       number: "02", 
       title: "During Service",
       description: "Snap photos of HVAC equipment for instant AI-powered diagnostics and recommendations",
-      icon: "📱"
+      icon: Smartphone
     },
     {
       number: "03",
       title: "Before Leaving", 
       description: "AI summary ensures nothing is missed and identifies cross-trade opportunities",
-      icon: "✅"
+      icon: CheckCircle
     }
   ];
 
@@ -38,7 +39,7 @@ export const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-8 text-center">
-                <div className="text-6xl mb-6">{step.icon}</div>
+                <step.icon className="w-16 h-16 mx-auto mb-6 text-tech-blue" />
                 <div className="text-sm font-bold text-tech-blue mb-2">{step.number}</div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
