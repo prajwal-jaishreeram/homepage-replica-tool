@@ -1,6 +1,46 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Car, Smartphone, CheckCircle } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Car, Smartphone, CheckCircle, LucideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface FeatureCardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const FeatureCard = ({ children, className }: FeatureCardProps) => (
+  <Card className={cn('group relative rounded-none shadow-zinc-950/5', className)}>
+    <CardDecorator />
+    {children}
+  </Card>
+);
+
+const CardDecorator = () => (
+  <>
+    <span className="border-primary absolute -left-px -top-px block size-2 border-l-2 border-t-2"></span>
+    <span className="border-primary absolute -right-px -top-px block size-2 border-r-2 border-t-2"></span>
+    <span className="border-primary absolute -bottom-px -left-px block size-2 border-b-2 border-l-2"></span>
+    <span className="border-primary absolute -bottom-px -right-px block size-2 border-b-2 border-r-2"></span>
+  </>
+);
+
+interface CardHeadingProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  number: string;
+}
+
+const CardHeading = ({ icon: Icon, title, description, number }: CardHeadingProps) => (
+  <div className="p-6">
+    <span className="text-muted-foreground flex items-center gap-2">
+      <Icon className="size-4" />
+      <span className="text-xs font-bold">{number}</span>
+      {title}
+    </span>
+    <p className="mt-8 text-2xl font-semibold">{description}</p>
+  </div>
+);
 
 export const HowItWorksSection = () => {
   const steps = [
@@ -25,8 +65,8 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-hero-accent">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="how-it-works" className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
             How It Works
@@ -36,28 +76,49 @@ export const HowItWorksSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="mx-auto grid gap-4 lg:grid-cols-3">
           {steps.map((step, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                {React.createElement(step.icon, { className: "w-16 h-16 mx-auto mb-6 text-tech-blue" })}
-                <div className="text-sm font-bold text-tech-blue mb-2">{step.number}</div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-              </CardContent>
-            </Card>
+            <FeatureCard key={index}>
+              <CardHeader className="pb-3">
+                <CardHeading
+                  icon={step.icon}
+                  title={step.title}
+                  description={step.description}
+                  number={step.number}
+                />
+              </CardHeader>
+              
+              <div className="relative mb-6 border-t border-dashed sm:mb-0">
+                <div className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_0%,transparent_40%,hsl(var(--muted)),white_125%)]"></div>
+                <div className="aspect-[4/3] p-6 flex items-center justify-center">
+                  <step.icon className="w-24 h-24 text-primary" />
+                </div>
+              </div>
+            </FeatureCard>
           ))}
         </div>
 
-        {/* Arrow connectors for desktop */}
-        <div className="hidden md:flex justify-center items-center mt-8 space-x-32">
-          <svg className="w-12 h-6 text-tech-blue" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
-          </svg>
-          <svg className="w-12 h-6 text-tech-blue" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
-          </svg>
-        </div>
+        <FeatureCard className="p-6 lg:col-span-1 mt-8">
+          <p className="mx-auto my-6 max-w-md text-balance text-center text-2xl font-semibold">
+            AI-powered workflow that adapts to your existing process
+          </p>
+          
+          <div className="flex justify-center gap-6 overflow-hidden">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Car className="w-4 h-4 text-primary" />
+              </div>
+              <div className="w-2 h-0.5 bg-border"></div>
+              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                <Smartphone className="w-4 h-4 text-primary" />
+              </div>
+              <div className="w-2 h-0.5 bg-border"></div>
+              <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center">
+                <CheckCircle className="w-4 h-4 text-primary" />
+              </div>
+            </div>
+          </div>
+        </FeatureCard>
       </div>
     </section>
   );
