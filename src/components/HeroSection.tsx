@@ -90,15 +90,14 @@ export const HeroSection = () => {
             {/* Headlines */}
             <div className="space-y-6">
               <h1 className="text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                10x Faster
+                AI for
                 <br />
                 <span className="text-tech-blue">HVAC</span>
                 <br />
                 Diagnostics
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground max-w-xl leading-relaxed">
-                AI-powered diagnostics from 15M+ HVAC manuals. 
-                Increase revenue, reduce callbacks, and turn every technician into an expert.
+                Never miss any sales opportunities for field technicians.
               </p>
             </div>
 
@@ -120,9 +119,6 @@ export const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto">
-                Download App
-              </Button>
               <Button 
                 variant="outline" 
                 className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto"
@@ -131,6 +127,9 @@ export const HeroSection = () => {
                 <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">
                   Book a Call
                 </a>
+              </Button>
+              <Button className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto">
+                Download App
               </Button>
             </div>
 
