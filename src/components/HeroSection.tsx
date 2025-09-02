@@ -95,7 +95,7 @@ export const HeroSection = () => {
                 Diagnostics
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground max-w-xl leading-relaxed">
-                Never miss any sales opportunities for field technicians.
+                10x technician's sales
               </p>
             </div>
 
