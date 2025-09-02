@@ -88,11 +88,9 @@ export const HeroSection = () => {
             </div>
 
             {/* Headlines */}
-            <div className="space-y-6">
+            <div className="space-y-3 lg:space-y-6">
               <h1 className="text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                AI for
-                <br />
-                <span className="text-tech-blue">HVAC</span>
+                AI for <span className="text-tech-blue">HVAC</span>
                 <br />
                 Diagnostics
               </h1>
