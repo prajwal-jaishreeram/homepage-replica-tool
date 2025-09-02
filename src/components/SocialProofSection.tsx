@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export const SocialProofSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-section-light">
       <div className="max-w-7xl mx-auto px-6">
         {/* Customer Testimonial */}
         <Card className="max-w-4xl mx-auto border-none shadow-lg">

@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Car, Smartphone, CheckCircle } from "lucide-react";
 
 export const HowItWorksSection = () => {
   const steps = [
@@ -6,26 +7,26 @@ export const HowItWorksSection = () => {
       number: "01",
       title: "On the Way",
       description: "AI Job Brief analyzes service history and prepares diagnostics during your drive time",
-      icon: "🚗"
+      icon: Car
     },
     {
       number: "02", 
       title: "During Service",
       description: "Snap photos of HVAC equipment for instant AI-powered diagnostics and recommendations",
-      icon: "📱"
+      icon: Smartphone
     },
     {
       number: "03",
       title: "Before Leaving", 
       description: "AI summary ensures nothing is missed and identifies cross-trade opportunities",
-      icon: "✅"
+      icon: CheckCircle
     }
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-hero-accent">
+    <section id="how-it-works" className="py-20 bg-section-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl font-bold text-foreground mb-6">
             How It Works
           </h2>
@@ -35,16 +36,21 @@ export const HowItWorksSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="text-6xl mb-6">{step.icon}</div>
-                <div className="text-sm font-bold text-tech-blue mb-2">{step.number}</div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+          {steps.map((step, index) => {
+            const IconComponent = step.icon;
+            return (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-in-left" style={{animationDelay: `${index * 0.2}s`}}>
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-tech-blue rounded-xl mx-auto flex items-center justify-center mb-6">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-sm font-bold text-tech-blue mb-2">{step.number}</div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* Arrow connectors for desktop */}

@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import hvacEquipment from "@/assets/hvac-equipment.png";
 
 export const HeroSection = () => {
   return (
-    <section className="bg-hero-bg min-h-screen flex items-center">
+    <section className="bg-section-white min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center animate-fade-in">
           {/* Left Content */}
           <div className="space-y-8">
             {/* Y Combinator Badge */}
@@ -51,12 +52,12 @@ export const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto">
                 Download App
               </Button>
               <Button 
                 variant="outline" 
-                className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 h-auto"
               >
                 Book a Call
               </Button>
@@ -72,20 +73,14 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Side - Hero Visual */}
+          {/* Right Side - HVAC Equipment Visual */}
           <div className="hidden lg:flex justify-center items-center">
-            <div className="relative">
-              <div className="w-96 h-96 bg-hero-accent rounded-3xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-tech-blue rounded-xl mx-auto flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">AI Diagnostics</h3>
-                  <p className="text-muted-foreground text-sm">Instant analysis from photos</p>
-                </div>
-              </div>
+            <div className="relative animate-float">
+              <img 
+                src={hvacEquipment} 
+                alt="Professional HVAC equipment and diagnostics tools" 
+                className="w-full max-w-lg h-auto object-contain"
+              />
             </div>
           </div>
         </div>
