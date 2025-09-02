@@ -60,7 +60,6 @@ export default {
 				'glow-color': 'hsl(var(--glow-color))',
 				'hero-bg': 'hsl(var(--hero-bg))',
 				'hero-accent': 'hsl(var(--hero-accent))',
-				'header-bg': 'hsl(var(--header-bg))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

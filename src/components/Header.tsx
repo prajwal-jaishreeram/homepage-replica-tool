@@ -15,7 +15,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="w-full bg-header-bg border-b border-border sticky top-0 z-50">
+    <header className="w-full bg-background border-b border-foreground sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
