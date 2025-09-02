@@ -11,7 +11,6 @@ export const FeaturesSection = () => {
       icon: <Users className="w-4 h-4 text-tech-blue" />,
       status: "Intelligence",
       tags: ["Customer", "ERP", "History"],
-      colSpan: 2,
       cta: "Learn More →"
     },
     {
@@ -21,7 +20,6 @@ export const FeaturesSection = () => {
       icon: <FileText className="w-4 h-4 text-success-green" />,
       status: "Knowledge Base",
       tags: ["Manuals", "AI", "Equipment"],
-      colSpan: 2,
       cta: "Explore →"
     },
     {
@@ -31,7 +29,6 @@ export const FeaturesSection = () => {
       icon: <Clipboard className="w-4 h-4 text-purple-500" />,
       status: "Automation",
       tags: ["Voice-to-Doc", "Sales", "Reports"],
-      colSpan: 2,
       cta: "Try Now →"
     }
   ];
