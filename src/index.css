@@ -2,43 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-/* NOSO LABS Design System - Clean, modern SaaS design */
+/* NOSO LABS Design System - Modern B2B SaaS */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 0 0% 9%;
+    --primary: 0 0% 5%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary-foreground: 0 0% 5%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 220 100% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 9%;
+    --border: 0 0% 93%;
+    --input: 0 0% 93%;
+    --ring: 0 0% 5%;
 
-    /* Y Combinator orange */
+    /* Brand colors */
     --yc-orange: 25 100% 55%;
+    --tech-blue: 220 100% 50%;
+    --success-green: 142 71% 45%;
     
     /* Hero gradient background */
-    --hero-bg: 240 5% 98%;
+    --hero-bg: 0 0% 99%;
+    --hero-accent: 220 100% 97%;
 
     --radius: 0.5rem;
 

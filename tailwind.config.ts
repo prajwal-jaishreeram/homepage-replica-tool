@@ -53,7 +53,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'yc-orange': 'hsl(var(--yc-orange))',
+				'tech-blue': 'hsl(var(--tech-blue))',
+				'success-green': 'hsl(var(--success-green))',
 				'hero-bg': 'hsl(var(--hero-bg))',
+				'hero-accent': 'hsl(var(--hero-accent))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
