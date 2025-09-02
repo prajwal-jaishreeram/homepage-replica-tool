@@ -61,14 +61,14 @@ const About = () => {
               </a>
             </Button>
             
-            <Button variant="outline" className="text-lg px-8 py-6 h-auto" asChild>
+            <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto" asChild>
               <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5" />
                 <span>Book a Call</span>
               </a>
             </Button>
             
-            <Button variant="outline" className="text-lg px-8 py-6 h-auto" asChild>
+            <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto" asChild>
               <a href="https://linkedin.com/company/noso-labs" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <Linkedin className="w-5 h-5" />
                 <span>Follow on LinkedIn</span>
