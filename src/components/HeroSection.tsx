@@ -119,16 +119,15 @@ export const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                variant="outline" 
-                className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto"
-                asChild
-              >
+              <Button className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto" asChild>
                 <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">
                   Book a Call
                 </a>
               </Button>
-              <Button className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto">
+              <Button 
+                variant="outline" 
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto"
+              >
                 Download App
               </Button>
             </div>
