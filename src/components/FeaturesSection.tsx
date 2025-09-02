@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, DollarSign, Wrench, Clipboard, FileText, Rocket } from "lucide-react";
@@ -60,7 +61,7 @@ export const FeaturesSection = () => {
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <feature.icon className="w-10 h-10 text-tech-blue" />
+                  {React.createElement(feature.icon, { className: "w-10 h-10 text-tech-blue" })}
                   <Badge variant="secondary" className="text-xs">
                     {feature.badge}
                   </Badge>

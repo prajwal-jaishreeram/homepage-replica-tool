@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Car, Smartphone, CheckCircle } from "lucide-react";
 
@@ -39,7 +40,7 @@ export const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-8 text-center">
-                <step.icon className="w-16 h-16 mx-auto mb-6 text-tech-blue" />
+                {React.createElement(step.icon, { className: "w-16 h-16 mx-auto mb-6 text-tech-blue" })}
                 <div className="text-sm font-bold text-tech-blue mb-2">{step.number}</div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
