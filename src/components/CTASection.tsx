@@ -27,7 +27,7 @@ const CardDecorator = () => (
 
 export const CTASection = () => {
   return (
-    <section className="bg-muted/50 py-16 md:py-32">
+    <section className="bg-section-bg py-16 md:py-32">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-5xl">
         <FeatureCard className="p-3 sm:p-6">
           <CardContent className="p-6 sm:p-8 md:p-12">

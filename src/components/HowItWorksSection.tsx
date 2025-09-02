@@ -66,7 +66,7 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="bg-muted/50 py-16 md:py-32">
+    <section id="how-it-works" className="bg-section-bg py-16 md:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
