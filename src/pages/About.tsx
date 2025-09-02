@@ -54,13 +54,6 @@ const About = () => {
           <h2 className="text-2xl font-bold text-foreground mb-8">Ready to Get Started?</h2>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button className="text-lg px-8 py-6 h-auto" asChild>
-              <a href="#" className="flex items-center space-x-2">
-                <Download className="w-5 h-5" />
-                <span>Download App</span>
-              </a>
-            </Button>
-            
             <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto" asChild>
               <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5" />

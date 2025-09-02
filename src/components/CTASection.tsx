@@ -43,9 +43,6 @@ export const CTASection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8 px-2">
-              <Button className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto">
-                Download App Now
-              </Button>
               <Button 
                 variant="outline" 
                 className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto"

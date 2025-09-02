@@ -59,9 +59,6 @@ export const Header = () => {
             <Button className="bg-foreground text-background hover:bg-foreground/90" asChild>
               <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
             </Button>
-            <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background">
-              Download App
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,9 +95,6 @@ export const Header = () => {
                 <div className="flex flex-col space-y-3 pt-6 border-t">
                   <Button className="w-full bg-foreground text-background hover:bg-foreground/90" asChild>
                     <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
-                  </Button>
-                  <Button variant="outline" className="w-full border-foreground text-foreground hover:bg-foreground hover:text-background">
-                    Download App
                   </Button>
                 </div>
               </nav>
