@@ -51,9 +51,9 @@ export const CyberneticBentoGrid = () => {
     return (
         <section className="py-20 bg-background">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-auto">
-                    {/* Testimonial - spans 2 columns and 2 rows */}
-                    <BentoItem className="lg:col-span-2 lg:row-span-2 flex flex-col justify-between min-h-[300px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 auto-rows-auto">
+                    {/* Testimonial - spans 3 columns, reduced height */}
+                    <BentoItem className="md:col-span-3 lg:col-span-3 flex flex-col justify-between min-h-[250px]">
                         <div>
                             <div className="flex mb-4">
                                 {[...Array(5)].map((_, i) => (
@@ -77,6 +77,7 @@ export const CyberneticBentoGrid = () => {
                         </div>
                     </BentoItem>
 
+                    {/* Metrics in same row - each spans 1 column */}
                     {/* HVAC Manuals Processed */}
                     <BentoItem className="text-center">
                         <div className="text-3xl font-bold text-foreground mb-2">15M+</div>
@@ -90,13 +91,13 @@ export const CyberneticBentoGrid = () => {
                     </BentoItem>
 
                     {/* Revenue Increase */}
-                    <BentoItem className="text-center lg:row-span-1">
+                    <BentoItem className="text-center">
                         <div className="text-3xl font-bold text-primary mb-2">5-10%</div>
                         <p className="text-muted-foreground text-sm">Revenue Increase</p>
                     </BentoItem>
 
-                    {/* Compliance Badges - spans 2 columns */}
-                    <BentoItem className="lg:col-span-2">
+                    {/* Compliance Badges - spans full width below metrics */}
+                    <BentoItem className="md:col-span-3 lg:col-span-6">
                         <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Security & Compliance</h3>
                         <div className="flex justify-center flex-wrap gap-3">
                             <Badge variant="outline" className="text-xs">SOC 2 Type 1</Badge>
