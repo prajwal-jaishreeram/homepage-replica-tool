@@ -69,7 +69,7 @@ export const FeaturesSection = () => {
           <h2 className="text-5xl font-bold text-foreground mb-6">
             Everything You Need
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
             Turn every technician into an expert with AI-powered diagnostics and revenue optimization tools
           </p>
         </div>
