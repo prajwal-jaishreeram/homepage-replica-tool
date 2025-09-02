@@ -17,14 +17,14 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img 
               src="/lovable-uploads/8437d24e-c6d4-40ce-9e2b-9b39b225e490.png" 
               alt="NOSO LABS Logo" 
               className="w-8 h-8"
             />
             <span className="text-2xl font-bold text-foreground">NOSO LABS</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
