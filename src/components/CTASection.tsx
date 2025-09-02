@@ -45,7 +45,7 @@ export const CTASection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8 px-2">
               <Button 
                 variant="outline" 
-                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto bg-foreground text-background hover:bg-foreground/90 border-foreground"
                 asChild
               >
                 <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">
