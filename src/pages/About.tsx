@@ -18,7 +18,7 @@ const About = () => {
           </p>
         </div>
 
-        <Card className="mb-12">
+        <Card className="mb-12 border-black-border dark:border-border">
           <CardContent className="p-8 lg:p-12">
             <div className="prose prose-slate dark:prose-invert max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -69,7 +69,7 @@ const About = () => {
             </Button>
           </div>
 
-          <div className="bg-muted/50 border border-border rounded-lg p-6">
+          <div className="bg-muted/50 border border-black-border dark:border-border rounded-lg p-6">
             <p className="text-sm text-muted-foreground">
               Have questions? Contact us at{" "}
               <a href="mailto:contact@noso.so" className="text-primary hover:underline">
