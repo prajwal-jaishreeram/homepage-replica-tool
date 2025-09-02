@@ -34,7 +34,7 @@ const BentoItem = ({ className, children }: BentoItemProps) => {
         <div 
             ref={itemRef} 
             className={cn(
-                "relative overflow-hidden rounded-lg bg-card border border-border transition-all duration-300",
+                "relative overflow-hidden rounded-lg bg-card border border-foreground dark:border-border transition-all duration-300",
                 "before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/10 before:to-transparent before:opacity-0",
                 "hover:before:opacity-100 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50",
                 "before:transition-opacity before:duration-300",
@@ -101,10 +101,10 @@ export const CyberneticBentoGrid = () => {
                     <BentoItem className="md:col-span-3 lg:col-span-6">
                         <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Security & Compliance</h3>
                         <div className="flex justify-center flex-wrap gap-3">
-                            <Badge variant="outline" className="text-xs">SOC 2 Type 1</Badge>
-                            <Badge variant="outline" className="text-xs">GDPR Compliant</Badge>
-                            <Badge variant="outline" className="text-xs">CCPA Compliant</Badge>
-                            <Badge variant="outline" className="text-xs">ISO/IEC 27001</Badge>
+                            <Badge variant="outline" className="text-xs border-foreground dark:border-border">SOC 2 Type 1</Badge>
+                            <Badge variant="outline" className="text-xs border-foreground dark:border-border">GDPR Compliant</Badge>
+                            <Badge variant="outline" className="text-xs border-foreground dark:border-border">CCPA Compliant</Badge>
+                            <Badge variant="outline" className="text-xs border-foreground dark:border-border">ISO/IEC 27001</Badge>
                         </div>
                     </BentoItem>
                 </div>

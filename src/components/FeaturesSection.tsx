@@ -77,7 +77,7 @@ export const FeaturesSection = () => {
         <BentoGrid items={features} />
 
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-secondary px-6 py-3 rounded-full">
+          <div className="inline-flex items-center space-x-2 bg-button-secondary-bg px-6 py-3 rounded-full border border-foreground dark:border-border">
             <span className="text-sm font-medium text-foreground">Reduce Callbacks & Repeat Visits</span>
             <div className="w-2 h-2 bg-success-green rounded-full"></div>
           </div>

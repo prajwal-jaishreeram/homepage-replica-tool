@@ -56,6 +56,8 @@ export default {
 				'tech-blue': 'hsl(var(--tech-blue))',
 				'success-green': 'hsl(var(--success-green))',
 				'section-bg': 'hsl(var(--section-bg))',
+				'button-secondary-bg': 'hsl(var(--button-secondary-bg))',
+				'glow-color': 'hsl(var(--glow-color))',
 				'hero-bg': 'hsl(var(--hero-bg))',
 				'hero-accent': 'hsl(var(--hero-accent))',
 				sidebar: {

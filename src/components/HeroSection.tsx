@@ -138,8 +138,8 @@ export const HeroSection = () => {
             <div className="pt-4">
               <p className="text-sm text-muted-foreground mb-2">Integrates with:</p>
               <div className="flex gap-4">
-                <Badge variant="secondary" className="text-xs">ServiceTitan</Badge>
-                <Badge variant="secondary" className="text-xs">HouseCall Pro</Badge>
+                <Badge variant="secondary" className="text-xs bg-button-secondary-bg text-foreground">ServiceTitan</Badge>
+                <Badge variant="secondary" className="text-xs bg-button-secondary-bg text-foreground">HouseCall Pro</Badge>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export const HeroSection = () => {
           {/* Right Side - Hero Visual */}
           <div className="hidden lg:flex justify-center items-start">
             <div className="relative -mt-32">
-              <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl scale-110"></div>
+              <div className="absolute inset-0 bg-glow-color/30 rounded-full blur-3xl scale-110"></div>
               <img 
                 src="/lovable-uploads/4810cb6a-432e-4dc2-a354-98ce43453416.png" 
                 alt="Modern HVAC Equipment - AI-Powered Diagnostics" 
