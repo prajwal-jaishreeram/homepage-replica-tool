@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Car, Smartphone, CheckCircle, LucideIcon } from "lucide-react";
+import { Car, Smartphone, CheckCircle, LucideIcon, Search, Stethoscope, CircleCheckBig } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -99,9 +99,9 @@ export const HowItWorksSection = () => {
           </p>
 
           <div className="flex justify-center gap-6 overflow-hidden">
-            <WorkflowStep label="Analyze" />
-            <WorkflowStep label="Diagnose" />
-            <WorkflowStep label="Complete" />
+            <WorkflowStep label="Analyze" icon={Search} />
+            <WorkflowStep label="Diagnose" icon={Stethoscope} />
+            <WorkflowStep label="Complete" icon={CircleCheckBig} />
           </div>
         </FeatureCard>
       </div>
@@ -109,11 +109,16 @@ export const HowItWorksSection = () => {
   );
 };
 
-const WorkflowStep = ({ label }: { label: string }) => (
+interface WorkflowStepProps {
+  label: string;
+  icon: LucideIcon;
+}
+
+const WorkflowStep = ({ label, icon: Icon }: WorkflowStepProps) => (
   <div>
     <div className="bg-gradient-to-b from-border size-fit rounded-2xl to-transparent p-px">
       <div className="bg-gradient-to-b from-background to-muted/25 relative flex aspect-square w-fit items-center justify-center rounded-[15px] p-4">
-        <div className="size-7 rounded-full border border-primary bg-background sm:size-8"></div>
+        <Icon className="size-6 text-primary sm:size-7" />
       </div>
     </div>
     <span className="text-muted-foreground mt-1.5 block text-center text-sm">{label}</span>
