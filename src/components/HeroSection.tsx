@@ -121,7 +121,7 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 variant="outline" 
-                className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto order-2 sm:order-1"
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto order-2 sm:order-1 bg-special-section-bg"
               >
                 Download App
               </Button>
@@ -132,14 +132,6 @@ export const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Integration Badge */}
-            <div className="pt-4">
-              <p className="text-sm text-muted-foreground mb-2">Integrates with:</p>
-              <div className="flex gap-4">
-                <Badge variant="secondary" className="text-xs bg-button-secondary-bg text-foreground">ServiceTitan</Badge>
-                <Badge variant="secondary" className="text-xs bg-button-secondary-bg text-foreground">HouseCall Pro</Badge>
-              </div>
-            </div>
           </div>
 
           {/* Right Side - Hero Visual */}
