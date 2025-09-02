@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,27 +30,30 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              item.href.startsWith('#') ? (
-                <a 
-                  key={item.href}
-                  href={item.href} 
-                  className="text-foreground hover:text-muted-foreground transition-colors font-medium"
-                >
-                  {item.label}
-                </a>
-              ) : (
-                <Link 
-                  key={item.href}
-                  to={item.href} 
-                  className="text-foreground hover:text-muted-foreground transition-colors font-medium"
-                >
-                  {item.label}
-                </Link>
-              )
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                item.href.startsWith('#') ? (
+                  <a 
+                    key={item.href}
+                    href={item.href} 
+                    className="text-foreground hover:text-muted-foreground transition-colors font-medium"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link 
+                    key={item.href}
+                    to={item.href} 
+                    className="text-foreground hover:text-muted-foreground transition-colors font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              ))}
+            </nav>
+            <ThemeToggle />
+          </div>
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
