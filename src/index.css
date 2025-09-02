@@ -44,6 +44,7 @@
     --section-bg: 0 0% 74%;
     --button-secondary-bg: 0 0% 74%;
     --glow-color: 202 56% 74%;
+    --special-section-bg: 0 0% 80%;
     
     /* Hero gradient background - light theme */
     --hero-bg: 0 0% 100%;
@@ -100,6 +101,7 @@
     --section-bg: 0 0% 14.9%;
     --button-secondary-bg: 0 0% 14.9%;
     --glow-color: 202 56% 74%;
+    --special-section-bg: 0 0% 14.9%;
     
     /* Hero gradient background - dark theme */
     --hero-bg: 0 0% 3.9%;

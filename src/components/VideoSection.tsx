@@ -2,7 +2,7 @@ import React from 'react';
 
 export const VideoSection = () => {
   return (
-    <section className="bg-section-bg py-16 md:py-32">
+    <section className="bg-special-section-bg py-16 md:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
