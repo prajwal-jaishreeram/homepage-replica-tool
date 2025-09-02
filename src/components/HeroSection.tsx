@@ -100,7 +100,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Key Stats */}
-            <div className="flex flex-wrap gap-6 text-sm">
+            <div className="hidden md:flex flex-wrap gap-6 text-sm">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-success-green rounded-full"></div>
                 <span className="text-foreground font-medium">5-10% Revenue Increase</span>
