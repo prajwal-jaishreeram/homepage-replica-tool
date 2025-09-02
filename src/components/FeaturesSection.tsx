@@ -1,45 +1,64 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Zap, DollarSign, Wrench, Clipboard, FileText, Rocket } from "lucide-react";
+import { BentoGrid, type BentoItem } from "@/components/ui/bento-grid";
+import { Zap, DollarSign, Wrench, Clipboard, FileText, Smartphone, Users, Clock } from "lucide-react";
 
 export const FeaturesSection = () => {
-  const features = [
+  const features: BentoItem[] = [
     {
       title: "Real-time Diagnostics",
+      meta: "15M+ manuals",
       description: "Instant analysis from equipment photos using 15M+ HVAC manuals",
-      icon: Zap,
-      badge: "AI-Powered"
+      icon: <Zap className="w-4 h-4 text-tech-blue" />,
+      status: "AI-Powered",
+      tags: ["Instant", "AI", "Photos"],
+      colSpan: 2,
+      hasPersistentHover: true,
+      cta: "Try Now →"
     },
     {
-      title: "Cross-trade Opportunities", 
+      title: "Cross-trade Revenue",
+      meta: "5-10% boost",
       description: "Identify electrical, plumbing, and other revenue opportunities automatically",
-      icon: DollarSign,
-      badge: "Revenue+"
+      icon: <DollarSign className="w-4 h-4 text-success-green" />,
+      status: "Revenue+",
+      tags: ["Revenue", "Cross-trade"],
+      cta: "Learn More →"
     },
     {
-      title: "ServiceTitan Integration",
+      title: "ServiceTitan Integration", 
+      meta: "seamless",
       description: "Seamless workflow integration with your existing service management platform",
-      icon: Wrench,
-      badge: "Integration"
+      icon: <Wrench className="w-4 h-4 text-orange-500" />,
+      status: "Integration",
+      tags: ["ServiceTitan", "Workflow"],
+      colSpan: 2,
+      cta: "Connect →"
     },
     {
       title: "Step-by-Step Guidance",
+      meta: "expert level",
       description: "AI provides detailed repair instructions and parts recommendations",
-      icon: Clipboard,
-      badge: "Guidance"
+      icon: <Clipboard className="w-4 h-4 text-purple-500" />,
+      status: "Guidance",
+      tags: ["Instructions", "Parts"],
+      cta: "Guide Me →"
     },
     {
-      title: "Service Call Summaries",
-      description: "Automated documentation and recommendations for follow-up work",
-      icon: FileText, 
-      badge: "Documentation"
+      title: "Smart Documentation",
+      meta: "automated",
+      description: "Automated service call summaries and recommendations for follow-up work",
+      icon: <FileText className="w-4 h-4 text-blue-500" />,
+      status: "Auto",
+      tags: ["Documentation", "Follow-up"]
     },
     {
-      title: "Zero Setup Cost",
+      title: "Mobile First",
+      meta: "5-min setup",
       description: "5-minute deployment with no hardware or infrastructure requirements",
-      icon: Rocket,
-      badge: "Easy Setup"
+      icon: <Smartphone className="w-4 h-4 text-green-500" />,
+      status: "Ready",
+      tags: ["Mobile", "Quick"],
+      colSpan: 2
     }
   ];
 
@@ -48,33 +67,17 @@ export const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
-            Everything You Need to 
-            <span className="text-tech-blue"> Succeed</span>
+            Everything You Need
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Powerful AI features designed specifically for HVAC professionals to increase efficiency and revenue
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Turn every technician into an expert with AI-powered diagnostics and revenue optimization tools
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  {React.createElement(feature.icon, { className: "w-10 h-10 text-tech-blue" })}
-                  <Badge variant="secondary" className="text-xs">
-                    {feature.badge}
-                  </Badge>
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <BentoGrid items={features} />
 
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-hero-accent px-6 py-3 rounded-full">
+          <div className="inline-flex items-center space-x-2 bg-secondary px-6 py-3 rounded-full">
             <span className="text-sm font-medium text-foreground">Reduce Callbacks & Repeat Visits</span>
             <div className="w-2 h-2 bg-success-green rounded-full"></div>
           </div>
