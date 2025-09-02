@@ -75,17 +75,11 @@ export const HeroSection = () => {
           {/* Right Side - Hero Visual */}
           <div className="hidden lg:flex justify-center items-center">
             <div className="relative">
-              <div className="w-96 h-96 bg-hero-accent rounded-3xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-tech-blue rounded-xl mx-auto flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">AI Diagnostics</h3>
-                  <p className="text-muted-foreground text-sm">Instant analysis from photos</p>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/4810cb6a-432e-4dc2-a354-98ce43453416.png" 
+                alt="Modern HVAC Equipment - AI-Powered Diagnostics" 
+                className="w-full max-w-lg h-auto object-contain"
+              />
             </div>
           </div>
         </div>
