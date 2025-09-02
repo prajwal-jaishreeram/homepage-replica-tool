@@ -7,7 +7,7 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
 	return (
 		<footer
 			className={cn(
-				'border-t border-black-border dark:border-border bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]',
+				'border-t bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]',
 				className,
 			)}
 			{...props}
@@ -106,7 +106,7 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
 				</div>
 			</div>
 			
-			<div className="border-t border-black-border dark:border-border">
+			<div className="border-t">
 				<div className="mx-auto max-w-7xl px-6 py-4">
 					<p className="text-muted-foreground text-xs text-center">
 						© 2025 NOSO LABS. All rights reserved.

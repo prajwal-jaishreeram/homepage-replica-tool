@@ -15,7 +15,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="w-full bg-header-bg dark:bg-background border-b border-border sticky top-0 z-50">
+    <header className="w-full bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -56,7 +56,7 @@ export const Header = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto" asChild>
+            <Button className="bg-foreground text-background hover:bg-foreground/90" asChild>
               <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
             </Button>
           </div>
@@ -93,7 +93,7 @@ export const Header = () => {
                   )
                 ))}
                 <div className="flex flex-col space-y-3 pt-6 border-t">
-                  <Button className="w-full bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-6 h-auto" asChild>
+                  <Button className="w-full bg-foreground text-background hover:bg-foreground/90" asChild>
                     <a href="https://cal.com/winstonchi/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
                   </Button>
                 </div>

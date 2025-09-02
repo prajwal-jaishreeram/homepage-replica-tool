@@ -126,7 +126,7 @@ export const HeroSection = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="border-foreground text-foreground hover:bg-foreground hover:text-background px-6 py-4 h-auto"
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background text-lg px-8 py-6 h-auto"
               >
                 Download App
               </Button>
