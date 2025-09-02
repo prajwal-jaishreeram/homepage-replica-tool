@@ -1,11 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+
+const CardDecorator = () => (
+  <>
+    <span className="border-primary absolute -left-px -top-px block size-2 border-l-2 border-t-2"></span>
+    <span className="border-primary absolute -right-px -top-px block size-2 border-r-2 border-t-2"></span>
+    <span className="border-primary absolute -bottom-px -left-px block size-2 border-b-2 border-l-2"></span>
+    <span className="border-primary absolute -bottom-px -right-px block size-2 border-b-2 border-r-2"></span>
+  </>
+);
 
 export const CTASection = () => {
   return (
     <section className="py-20 bg-foreground">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <Card className="bg-background border-none shadow-2xl">
+        <Card className={cn('group relative rounded-none shadow-zinc-950/5 bg-background border-none shadow-2xl')}>
+          <CardDecorator />
           <CardContent className="p-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to 10x Your 
